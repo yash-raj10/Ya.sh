@@ -1,0 +1,61 @@
+---
+import Anchor from "./common/Anchor.astro";
+
+export type Props = {
+  company: string;
+  position: string;
+  description: string;
+  location: string;
+  type: string;
+  skills?: string[];
+  companyUrl?: string;
+  startDate: string;
+  endDate: string;
+};
+
+const { company, position, description, location, type, skills, companyUrl, startDate, endDate } = Astro.props;
+
+// Format date for display
+const formatDate = (dateStr: string) => {
+  if (dateStr === "Present") return "Present";
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'short' 
+  });
+};
+---
+
+<div class="zag-text zag-transition flex flex-col gap-3 pb-8">
+  <div class="flex flex-col gap-1">
+    <h3 class="text-xl font-semibold">
+      {position}
+    </h3>
+    {companyUrl ? (
+      <Anchor url={companyUrl} class="text-lg zag-muted zag-transition" external>
+        {company}
+      </Anchor>
+    ) : (
+      <span class="text-lg zag-muted zag-transition">{company}</span>
+    )}
+    <div class="flex flex-wrap gap-2 text-sm zag-muted zag-transition">
+      <span>{location}</span>
+      <span>•</span>
+      <span>{type}</span>
+      <span>•</span>
+      <span>{formatDate(startDate)} - {formatDate(endDate)}</span>
+    </div>
+  </div>
+  <p class="">
+    {description}
+  </p>
+  {skills && skills.length > 0 && (
+    <div class="flex flex-wrap gap-2 text-sm">
+      {skills.map((skill) => (
+        <span class="-zag-text -zag-bg zag-transition font-medium py-1 px-2 text-xs">
+          {skill}
+        </span>
+      ))}
+    </div>
+  )}
+</div>

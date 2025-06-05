@@ -1,0 +1,37 @@
+---
+import type { ExperienceFrontmatter } from "../../lib/types";
+import { GLOBAL } from "../../lib/variables";
+import ExperienceSnippet from "../ExperienceSnippet.astro";
+import Anchor from "../common/Anchor.astro";
+
+type Props = {
+  featuredExperiences: Array<ExperienceFrontmatter>;
+}
+
+const { featuredExperiences } = Astro.props;
+---
+
+<div class="flex justify-between items-center w-full">
+  <h3 class="font-display text-lg sm:text-xl leading-loose">{GLOBAL.experienceName}</h3>
+  <Anchor url="/experience" class="text-base">{GLOBAL.viewAll}</Anchor>
+</div>
+<ul class="my-8">
+  {
+    (featuredExperiences.length === 0 && <p>{GLOBAL.noExperience}</p>) ||
+      featuredExperiences.map((experience) => (
+        <li>
+          <ExperienceSnippet
+            company={experience.company}
+            position={experience.position}
+            description={experience.description}
+            location={experience.location}
+            type={experience.type}
+            skills={experience.skills ?? []}
+            companyUrl={experience.companyUrl}
+            startDate={experience.startDate}
+            endDate={experience.endDate}
+          />
+        </li>
+      ))
+  }
+</ul>
