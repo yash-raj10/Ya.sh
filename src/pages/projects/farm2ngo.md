@@ -2,8 +2,7 @@
 layout: ../../layouts/ProjectLayout.astro
 title: Farm2Ngo
 description: A web app to connect farmers with surplus crops to NGOs fighting hunger.
-tags:
-  ["golang", "next.js", "solana", "google maps", "food", "ngo", "blockchain"]
+tags: ["Go", "next.js", "solana", "google maps", "blockchain"]
 githubUrl: https://github.com/yash-raj10/Farm2Ngo
 timestamp: 2025-06-05T00:00:00+00:00
 featured: true

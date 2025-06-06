@@ -69,6 +69,11 @@ export const processContentInDir = async <T extends object, K>(
  * @returns a shortened version of the content
  */
 export const getShortDescription = (content: string, maxLength = 20) => {
+  // Handle undefined, null, or empty content
+  if (!content || typeof content !== "string") {
+    return "";
+  }
+
   const splitByWord = content.split(" ");
   const length = splitByWord.length;
   return length > maxLength

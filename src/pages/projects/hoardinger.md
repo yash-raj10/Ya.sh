@@ -2,16 +2,7 @@
 layout: ../../layouts/ProjectLayout.astro
 title: Hoardinger
 description: Hoardinger – Rent/sell Hoardings whenever you want!
-tags:
-  [
-    "ads",
-    "marketplace",
-    "next.js",
-    "mongodb",
-    "cloudinary",
-    "nodemailer",
-    "Maps",
-  ]
+tags: ["next.js", "mongodb", "nodemailer", "Maps"]
 githubUrl: https://github.com/yash-raj10/Hoardinger1.0
 liveUrl: https://hoardinger.vercel.app/
 timestamp: 2025-06-05T00:00:00+00:00
