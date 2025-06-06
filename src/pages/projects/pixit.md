@@ -2,7 +2,7 @@
 layout: ../../layouts/ProjectLayout.astro
 title: pixIT
 description: pixIT is a fast, flexible command-line image editor built with Rust 🦀.
-tags: ["rust", "cli", "image-processing", "open-source"]
+tags: ["Rust", "cli", "image-processing", "open-source"]
 githubUrl: https://github.com/yash-raj10/pixIT
 timestamp: 2025-06-05T00:00:00+00:00
 featured: true
