@@ -6,8 +6,7 @@ export const GLOBAL = {
   rootUrl: "https://zaggonaut.dev",
   shortDescription: "Curious &<br /> Developer / Hacker.",
   titleDescription: "Curious Developer / Hacker",
-  longDescription:
-    "Zaggonaut is a retro-inspired theme for Astro, built using TypeScript, TailwindCSS, and Astro.",
+  longDescription: "Life at Extremes!",
 
   // Social media links
   githubProfile: "https://github.com/yash-raj10",

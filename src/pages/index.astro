@@ -4,6 +4,7 @@ import { GLOBAL } from "../lib/variables";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/Hero.astro";
 import Section from "../components/common/Section.astro";
+import Divider from "../components/common/Divider.astro";
 import FeaturedProjects from "../components/home/FeaturedProjects.astro";
 import FeaturedArticles from "../components/home/FeaturedArticles.astro";
 import FeaturedExperiences from "../components/home/FeaturedExperiences.astro";
@@ -43,12 +44,15 @@ import FeaturedExperiences from "../components/home/FeaturedExperiences.astro";
   <Section class="my-16">
     <Hero />
   </Section>
+  <Divider />
   <Section>
     <FeaturedProjects featuredProjects={featuredProjects} />
   </Section>
+  <Divider />
   <Section>
     <FeaturedArticles featuredArticles={featuredArticles} />
   </Section>
+  <Divider />
   <Section>
     <FeaturedExperiences featuredExperiences={featuredExperiences} />
   </Section>
