@@ -6,7 +6,7 @@ tags: ["Rust", "cli", "image-processing", "open-source"]
 githubUrl: https://github.com/yash-raj10/pixIT
 timestamp: 2025-06-05T00:00:00+00:00
 featured: true
-filename: pixit
+filename: 2pixit
 ---
 
 ## The Details

@@ -6,7 +6,7 @@ tags: ["automation", "telegram", "postgresql", "google-sheets"]
 githubUrl: https://github.com/yash-raj10/FNotifier
 timestamp: 2025-06-05T00:00:00+00:00
 featured: true
-filename: fnotifier
+filename: 1fnotifier
 ---
 
 ## The Details

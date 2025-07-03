@@ -58,7 +58,7 @@ export const projects = (
 export const experiences = experienceData
   .map((experience) => ({
     ...experience,
-    description: getShortDescription(experience.description),
+    description: experience.description, // Keep full description without truncation
     filename: `/experience`, // No individual pages, so just point to main experience page
   }))
   .sort((a, b) => {
