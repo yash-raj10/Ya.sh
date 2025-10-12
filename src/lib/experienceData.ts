@@ -16,4 +16,19 @@ export const experienceData: ExperienceFrontmatter[] = [
     timestamp: "2023-01-15T00:00:00+00:00",
     filename: "techcorp-senior-developer",
   },
+  {
+    company: "Auraverse.club",
+    position: "Golang Backend intern",
+    description:
+      "• Optimised API performance by reducing response time by 85% using Go concurrency (goroutines and channels), improving system efficiency.\n• Worked with GCP for deployment, implemented CI/CD pipelines and Nginx configurations for smooth releases.",
+    location: "Remote",
+    type: "Intern",
+    skills: ["Golang", "GCP", "CI/CD", "Nginx", "Docker"],
+    companyUrl: "https://auraverse.club",
+    startDate: "2025-07",
+    endDate: "Present",
+    featured: true,
+    timestamp: "2025-07-01T00:00:00+00:00",
+    filename: "auraverse-golang-intern",
+  },
 ];

@@ -1,5 +1,9 @@
 ---
-import { featuredArticles, featuredProjects, featuredExperiences } from "../lib/featured";
+import {
+  featuredArticles,
+  featuredProjects,
+  featuredExperiences,
+} from "../lib/featured";
 import { GLOBAL } from "../lib/variables";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/Hero.astro";
@@ -13,29 +17,17 @@ import FeaturedExperiences from "../components/home/FeaturedExperiences.astro";
 <Layout>
   <Fragment slot="head">
     <title>{GLOBAL.username}</title>
-    <meta
-      name="description"
-      content={GLOBAL.longDescription}
-    />
+    <meta name="description" content={GLOBAL.longDescription} />
     <meta
       property="og:title"
       content={`${GLOBAL.username} • ${GLOBAL.titleDescription}`}
     />
-    <meta
-      property="og:description"
-      content={GLOBAL.longDescription}
-    />
-    <meta property="og:image" content={`${GLOBAL.rootUrl}/zaggonaut.png`} /> 
+    <meta property="og:description" content={GLOBAL.longDescription} />
+    <meta property="og:image" content={`${GLOBAL.rootUrl}/zaggonaut.png`} />
     <meta property="og:url" content={GLOBAL.rootUrl} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content={GLOBAL.username}
-    />
-    <meta
-      name="twitter:description"
-      content={GLOBAL.longDescription}
-    />
+    <meta name="twitter:title" content={GLOBAL.username} />
+    <meta name="twitter:description" content={GLOBAL.longDescription} />
     <meta name="twitter:image" content={`${GLOBAL.rootUrl}/zaggonaut.png`} />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="English" />
@@ -46,14 +38,14 @@ import FeaturedExperiences from "../components/home/FeaturedExperiences.astro";
   </Section>
   <Divider />
   <Section>
-    <FeaturedProjects featuredProjects={featuredProjects} />
-  </Section>
-  <Divider />
-  <Section>
     <FeaturedArticles featuredArticles={featuredArticles} />
   </Section>
   <Divider />
   <Section>
     <FeaturedExperiences featuredExperiences={featuredExperiences} />
+  </Section>
+  <Divider />
+  <Section>
+    <FeaturedProjects featuredProjects={featuredProjects} />
   </Section>
 </Layout>
