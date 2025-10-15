@@ -13,8 +13,8 @@ export const experienceData: ExperienceFrontmatter[] = [
     startDate: "2025-01",
     endDate: "2025-03",
     featured: true,
-    timestamp: "2023-01-15T00:00:00+00:00",
-    filename: "techcorp-senior-developer",
+    timestamp: "2025-01-15T00:00:00+00:00",
+    filename: "nikosta-fullstack-developer",
   },
   {
     company: "Auraverse.club",
