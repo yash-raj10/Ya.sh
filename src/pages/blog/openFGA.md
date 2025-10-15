@@ -9,7 +9,7 @@ timestamp: 2025-10-15T09:00:00+00:00
 filename: openFGA
 ---
 
-while i have given a task to implement the Role-Based Access Control in the product that I am working on in my internship, i did down a bit. I looked for some open source project which can help me to do this. During that peiod i came accross a project called openFGA, which is an open source Fine-Grained Authorization solution inspired by Google's Zanzibar paper, which is currently under CNCF and built by the engineers at Auth0(Okta). I looked at the docs, which instantly got my interest as the implementation was easy and straightforward. OpenFGA devides the whole Role-Based Access thing to a few components and makes it really easy to implement it in any complex project.
+While I have given a task to implement the Role-Based Access Control in the product that I am working on in my internship, I dug a bit. I looked for some open source project that can help me do this. During that period, I came across a project called openFGA, which is an open-source Fine-Grained Authorisation solution inspired by Google's Zanzibar paper, which is currently under CNCF and built by the engineers at Auth0(Okta). I looked at the docs, which instantly got my interest as the implementation was easy and straightforward. OpenFGA divides the whole Role-Based Access thing into a few components and makes it really easy to implement it in any complex project.
 
 So **what really openFGA is?**
 OpenFGA is an open source Fine-Grained Authorization solution inspired by Google's Zanzibar paper, and helps you to implement complex Role-Based Access Control Authorization shamelessly. Example - what we have similar in Google Docs, where the owner of a file can give view/edit access to a file/folder with one click.
