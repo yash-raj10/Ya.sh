@@ -11,7 +11,7 @@ export const featuredProjects = (
     "projects",
     (data) => {
       const shortDescription = getShortDescription(
-        data.frontmatter.description
+        data.frontmatter.description,
       );
       return {
         title: data.frontmatter.title,
@@ -23,7 +23,7 @@ export const featuredProjects = (
         timestamp: data.frontmatter.timestamp,
         filename: `/projects/${data.frontmatter.filename}`,
       };
-    }
+    },
   )
 )
   .filter((project) => project.featured)
@@ -38,7 +38,7 @@ export const featuredArticles = (
     "blog",
     (data) => {
       const shortDescription = getShortDescription(
-        data.frontmatter.description
+        data.frontmatter.description,
       );
       return {
         title: data.frontmatter.title,
@@ -49,7 +49,7 @@ export const featuredArticles = (
         timestamp: data.frontmatter.timestamp,
         filename: `/blog/${data.frontmatter.filename}`,
       };
-    }
+    },
   )
 )
   .filter((project) => project.featured)
@@ -62,7 +62,6 @@ export const featuredArticles = (
 export const featuredExperiences = experienceData
   .map((experience) => ({
     ...experience,
-    description: getShortDescription(experience.description),
     filename: `/experience`, // No individual pages, so just point to main experience page
   }))
   .filter((experience) => experience.featured)

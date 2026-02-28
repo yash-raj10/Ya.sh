@@ -12,7 +12,13 @@ filename: z-otherPrjs
 
 ---
 
-### 🕷️ [Go Web Crawler](https://github.com/yash-raj10/go-web-crawler)
+### � [FNotifier](https://github.com/yash-raj10/FNotifier)
+
+A lightweight automation tool (like Zapier) built with Go that handles form submissions and distributes data simultaneously to PostgreSQL, Telegram, and Google Sheets. Features Google OAuth2 and leverages Go's concurrency for fast background services.
+
+---
+
+### �🕷️ [Go Web Crawler](https://github.com/yash-raj10/go-web-crawler)
 
 A simple, concurrent web crawler in Go that extracts all anchor links from internal pages within a domain. Built using `net/http`, `url`, and `steelx/extractlinks`.
 

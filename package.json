@@ -18,5 +18,12 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.5"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sharp"
+    ]
   }
 }

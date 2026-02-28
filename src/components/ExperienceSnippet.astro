@@ -13,15 +13,25 @@ export type Props = {
   endDate: string;
 };
 
-const { company, position, description, location, type, skills, companyUrl, startDate, endDate } = Astro.props;
+const {
+  company,
+  position,
+  description,
+  location,
+  type,
+  skills,
+  companyUrl,
+  startDate,
+  endDate,
+} = Astro.props;
 
 // Format date for display
 const formatDate = (dateStr: string) => {
   if (dateStr === "Present") return "Present";
   const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'short' 
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
   });
 };
 ---
@@ -31,13 +41,19 @@ const formatDate = (dateStr: string) => {
     <h3 class="text-xl font-semibold">
       {position}
     </h3>
-    {companyUrl ? (
-      <Anchor url={companyUrl} class="text-lg zag-muted zag-transition" external>
-        {company}
-      </Anchor>
-    ) : (
-      <span class="text-lg zag-muted zag-transition">{company}</span>
-    )}
+    {
+      companyUrl ? (
+        <Anchor
+          url={companyUrl}
+          class="text-lg zag-muted zag-transition"
+          external
+        >
+          {company}
+        </Anchor>
+      ) : (
+        <span class="text-lg zag-muted zag-transition">{company}</span>
+      )
+    }
     <div class="flex flex-wrap gap-2 text-sm zag-muted zag-transition">
       <span>{location}</span>
       <span>•</span>
@@ -46,16 +62,18 @@ const formatDate = (dateStr: string) => {
       <span>{formatDate(startDate)} - {formatDate(endDate)}</span>
     </div>
   </div>
-  <p class="">
-    {description}
-  </p>
-  {skills && skills.length > 0 && (
-    <div class="flex flex-wrap gap-2 text-sm">
-      {skills.map((skill) => (
-        <span class="-zag-text -zag-bg zag-transition font-medium py-1 px-2 text-xs">
-          {skill}
-        </span>
-      ))}
-    </div>
-  )}
+  <div class="flex flex-col gap-1">
+    {description.split("\n").map((line) => <p class="">{line}</p>)}
+  </div>
+  {
+    skills && skills.length > 0 && (
+      <div class="flex flex-wrap gap-2 text-sm">
+        {skills.map((skill) => (
+          <span class="-zag-text -zag-bg zag-transition font-medium py-1 px-2 text-xs">
+            {skill}
+          </span>
+        ))}
+      </div>
+    )
+  }
 </div>

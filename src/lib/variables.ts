@@ -14,7 +14,7 @@ export const GLOBAL = {
   linkedinProfile: "https://www.linkedin.com/in/yash-raj-in/",
 
   // Common text names used throughout the site
-  articlesName: "Articles",
+  articlesName: "Recent Blogs",
   projectsName: "Projects",
   experienceName: "Experience",
   viewAll: "View All",
